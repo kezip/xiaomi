@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  display: block;
+}
+.clearfix::after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.typePage {
+  width: 1226px;
+  margin: 0 auto;
+}
+.topNav {
+  height: 40px;
+  width: 100%;
+  background-color: #333;
+}
+.topNav .typePage > ul > li {
+  float: left;
+}
+.topNav .typePage > ul > li > a {
+  font-size: 12px;
+  line-height: 40px;
+  color: #aaa;
+}
+.topNav .typePage > ul > li > span {
+  color: #aaa;
+  margin-right: 6px;
+  font-size: 12px;
+}
+.topNav .typePage ul:nth-child(2) > li {
+  float: left;
+}
+.topNav .typePage ul:nth-child(2) > li:nth-child(1) {
+  margin-left: 470px;
+}
+.topNav .typePage ul:last-of-type {
+  color: #aaa;
+  float: right;
+}
+.topNav .typePage ul:last-of-type > li:first-child {
+  background-color: #424242;
+  padding: 0px 15px;
+  position: relative;
+}
+.topNav .typePage ul:last-of-type > li:first-child .shopping-cart {
+  height: 80px;
+  width: 300px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 80px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  z-index: 3;
+}
+.topNav .typePage ul:last-of-type > li:first-child:hover {
+  background-color: #fff;
+}
+.topNav .typePage ul:last-of-type > li:first-child:hover > i,
+.topNav .typePage ul:last-of-type > li:first-child:hover > a {
+  color: #FF6700;
+}
+.topNav .typePage ul:last-of-type > li:first-child:hover .shopping-cart {
+  color: #aaa;
+  display: block;
+}
+.navListNav .typePage .logo {
+  float: left;
+  width: 225px;
+  height: 66px;
+  padding-top: 20px;
+}
+.navListNav .typePage .logo > a {
+  display: block;
+  float: left;
+  line-height: 86px;
+}
+.navListNav .typePage .logo > a:first-of-type {
+  margin-right: 5px;
+}
+.navListNav .typePage .nav-center > ul > li {
+  float: left;
+}
+.navListNav .typePage .nav-center > ul > li .navList {
+  display: block;
+  color: black;
+  font-family: "微软雅黑";
+  margin: 0px 7px;
+  line-height: 86px;
+}
+.navListNav .typePage .nav-center > ul > li .navList:hover {
+  color: #FF6700;
+}
+.navListNav .typePage .search-top {
+  position: relative;
+  float: left;
+}
+.navListNav .typePage .search-top .search {
+  width: 250px;
+  height: 45px;
+  margin-top: 20px;
+  margin-left: 104px;
+  border: 1px solid #ccc;
+  border-right: 0;
+}
+.navListNav .typePage .search-top .hot-product {
+  position: absolute;
+  right: 58px;
+  top: 33px;
+}
+.navListNav .typePage .search-top .hot-product > li {
+  float: left;
+  margin-left: 5px;
+}
+.navListNav .typePage .search-top .hot-product > li > a {
+  background-color: #ccc;
+  font-size: 12px;
+  color: #666;
+  padding: 3px 5px;
+}
+.navListNav .typePage .search-top .hot-product > li > a:hover {
+  background-color: #FF6700;
+  color: #fff;
+}
+.navListNav .typePage .search-top .icon-sousuo {
+  font-size: 23px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  float: right;
+  margin-top: 20px;
+}
+.navListNav .typePage .search-top .icon-sousuo:hover {
+  color: #fff;
+  background-color: #FF6700;
+}
