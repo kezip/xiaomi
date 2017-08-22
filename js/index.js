@@ -1,6 +1,6 @@
 $(function () {
     $.ajax({
-        url: 'http://192.168.70.22:9900/api/nav',
+        url: 'http://127.0.0.1:9900/api/nav',
         // dataType: 'jsonp',
         success: function (data) {
             console.log(data);
@@ -11,18 +11,23 @@ $(function () {
             $('.nav-center').append(lists);
         }
     })
-    $.ajax({
-        url: 'http://192.168.70.22:9900/api/nav',
-        success: function (data) {
-            console.log(data);
-            var datas = JSON.parse(data);
-            var listsBottom = template('templates', {
-                datas: datas
-            });
-            // $('.nav-center ul:first-of-type li').on('hover', fucntion(){
 
-            // })
+    // $('.nav-center ul:first-of-type li').append(listsBottom);
+    $('.nav-center ul:first-of-type li').on('hover', function () {
+        console.log(111);
+        $.ajax({
+            url: 'http://127.0.0.1:9900/api/nav',
+            data: 'type=' + $(this).attr(type),
+            success: function (data) {
+                console.log(data);
+                var lists = JSON.parse(data);
+                var listsBottom = template('templates', {
+                    lists: lists
+                });
 
-        }
+            }
+        })
+        // $('.navCenterBottom').style.dispaly = blcok;
     })
+
 })

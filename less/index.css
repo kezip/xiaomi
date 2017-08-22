@@ -11,7 +11,7 @@
   clear: both;
 }
 .clearfix {
-  zoom: 1;
+  *zoom: 1;
 }
 ul {
   list-style: none;
@@ -95,6 +95,9 @@ a {
 .navListNav .typePage .logo > a:first-of-type {
   margin-right: 5px;
 }
+.navListNav .typePage .nav-center {
+  position: relative;
+}
 .navListNav .typePage .nav-center > ul > li {
   float: left;
 }
@@ -107,6 +110,12 @@ a {
 }
 .navListNav .typePage .nav-center > ul > li .navList:hover {
   color: #FF6700;
+}
+.navListNav .typePage .nav-center > ul > li .navCenterBottom {
+  display: none;
+  height: 100px;
+  position: absolute;
+  top: 100px;
 }
 .navListNav .typePage .search-top {
   position: relative;

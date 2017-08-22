@@ -14,7 +14,7 @@
 }
 
 .clearfix {
-    zoom: 1;
+    *zoom: 1;
 }
 
 ul {
@@ -115,6 +115,7 @@ a {
             }
         }
         .nav-center {
+            position: relative;
             >ul {
                 >li {
                     // height: 86px;
@@ -127,6 +128,18 @@ a {
                         line-height: 86px;
                         &:hover {
                             color: #FF6700;
+                        }
+                    }
+                    .navCenterBottom {
+                        display: none;
+                        height: 100px;
+                        position: absolute;
+                        top: 100px;
+                        >ul {
+                            >li {
+                                >a {}
+                                >p {}
+                            }
                         }
                     }
                 }
