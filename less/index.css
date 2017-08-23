@@ -19,6 +19,10 @@ ul {
 a {
   text-decoration: none;
 }
+input {
+  border: none;
+  outline: medium;
+}
 .typePage {
   width: 1226px;
   margin: 0 auto;
@@ -40,6 +44,9 @@ a {
   color: #aaa;
   margin-right: 6px;
   font-size: 12px;
+}
+.topNav .typePage > ul > li:hover > a {
+  color: #fff;
 }
 .topNav .typePage ul:nth-child(2) > li {
   float: left;
@@ -63,7 +70,7 @@ a {
   text-align: center;
   line-height: 80px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #eee;
   display: none;
   position: absolute;
   top: 40px;
@@ -80,6 +87,49 @@ a {
 .topNav .typePage ul:last-of-type > li:first-child:hover .shopping-cart {
   color: #aaa;
   display: block;
+}
+.navListNav .spinner {
+  display: none;
+  height: 220px;
+  width: 100%;
+  position: absolute;
+  top: 135px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+.navListNav .spinner .typePage > ul {
+  min-width: 1500px;
+  margin-left: 120px;
+  margin-top: 30px;
+}
+.navListNav .spinner .typePage > ul > li {
+  float: left;
+}
+.navListNav .spinner .typePage > ul > li > a {
+  padding: 0px 20px;
+  display: block;
+  width: 100%;
+  border-left: 1px solid #ccc;
+}
+.navListNav .spinner .typePage > ul > li > a > img {
+  width: 160px;
+  height: 110px;
+}
+.navListNav .spinner .typePage > ul > li > p {
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+}
+.navListNav .spinner .typePage > ul > li > p:first-of-type {
+  margin-top: 10px;
+  color: black;
+}
+.navListNav .spinner .typePage > ul > li > p:last-of-type {
+  color: red;
+}
+.navListNav .spinner .typePage > ul > li:first-of-type > a {
+  border-left: 0;
 }
 .navListNav .typePage .logo {
   float: left;
@@ -111,12 +161,6 @@ a {
 .navListNav .typePage .nav-center > ul > li .navList:hover {
   color: #FF6700;
 }
-.navListNav .typePage .nav-center > ul > li .navCenterBottom {
-  display: none;
-  height: 100px;
-  position: absolute;
-  top: 100px;
-}
 .navListNav .typePage .search-top {
   position: relative;
   float: left;
@@ -125,7 +169,7 @@ a {
   width: 250px;
   height: 45px;
   margin-top: 20px;
-  margin-left: 104px;
+  margin-left: 102px;
   border: 1px solid #ccc;
   border-right: 0;
 }
@@ -147,6 +191,33 @@ a {
 .navListNav .typePage .search-top .hot-product > li > a:hover {
   background-color: #FF6700;
   color: #fff;
+}
+.navListNav .typePage .search-top .hot-search {
+  display: none;
+  width: 230px;
+  border: 1px solid #ff6700;
+  background-color: #fff;
+  margin-left: 102px;
+  border-top: 0;
+  padding: 0px 10px;
+}
+.navListNav .typePage .search-top .hot-search > li {
+  width: 100%;
+  height: 30px;
+}
+.navListNav .typePage .search-top .hot-search > li > a > span {
+  line-height: 22px;
+  font-family: "微软雅黑";
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.navListNav .typePage .search-top .hot-search > li > a > span:first-of-type {
+  color: #000;
+  float: left;
+}
+.navListNav .typePage .search-top .hot-search > li > a > span:last-of-type {
+  color: #ccc;
+  float: right;
 }
 .navListNav .typePage .search-top .icon-sousuo {
   font-size: 23px;

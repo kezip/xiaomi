@@ -25,6 +25,11 @@ a {
     text-decoration: none;
 }
 
+input {
+    border: none;
+    outline: medium;
+}
+
 // 版心
 .typePage {
     width: 1226px;
@@ -50,6 +55,11 @@ a {
                     margin-right: 6px;
                     font-size: 12px;
                 }
+                &:hover {
+                    >a {
+                        color: #fff;
+                    }
+                }
             }
         }
         ul:nth-child(2) {
@@ -74,7 +84,7 @@ a {
                     text-align: center;
                     line-height: 80px;
                     background-color: #fff;
-                    border: 1px solid #ccc;
+                    border: 1px solid #eee;
                     display: none;
                     position: absolute;
                     top: 40px;
@@ -99,6 +109,55 @@ a {
 
 // logo导航栏
 .navListNav {
+    // position: relative;
+    // 下拉列表
+    .spinner {
+        display: none;
+        height: 220px;
+        width: 100%;
+        position: absolute;
+        top: 135px;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        overflow: hidden;
+        .typePage {
+            >ul {
+                min-width: 1500px;
+                margin-left: 120px;
+                margin-top: 30px;
+                >li {
+                    float: left;
+                    >a {
+                        padding: 0px 20px;
+                        display: block;
+                        width: 100%;
+                        border-left: 1px solid #ccc;
+                        >img {
+                            width: 160px;
+                            height: 110px;
+                        }
+                    }
+                    >p {
+                        font-size: 12px;
+                        line-height: 25px;
+                        text-align: center;
+                        &:first-of-type {
+                            margin-top: 10px;
+                            color: black;
+                        }
+                        &:last-of-type {
+                            color: red;
+                        }
+                    }
+                    &:first-of-type {
+                        >a {
+                            border-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .typePage {
         .logo {
             float: left;
@@ -113,12 +172,12 @@ a {
                     margin-right: 5px;
                 }
             }
-        }
+        } // 导航栏
         .nav-center {
             position: relative;
             >ul {
+                // height: 86px;
                 >li {
-                    // height: 86px;
                     float: left;
                     .navList {
                         display: block;
@@ -128,18 +187,6 @@ a {
                         line-height: 86px;
                         &:hover {
                             color: #FF6700;
-                        }
-                    }
-                    .navCenterBottom {
-                        display: none;
-                        height: 100px;
-                        position: absolute;
-                        top: 100px;
-                        >ul {
-                            >li {
-                                >a {}
-                                >p {}
-                            }
                         }
                     }
                 }
@@ -152,7 +199,7 @@ a {
                 width: 250px;
                 height: 45px;
                 margin-top: 20px;
-                margin-left: 104px;
+                margin-left: 102px;
                 border: 1px solid #ccc;
                 border-right: 0;
             }
@@ -171,6 +218,35 @@ a {
                         &:hover {
                             background-color: #FF6700;
                             color: #fff;
+                        }
+                    }
+                }
+            }
+            .hot-search {
+                display: none;
+                width: 230px;
+                border: 1px solid #ff6700;
+                background-color: #fff;
+                margin-left: 102px;
+                border-top: 0;
+                padding: 0px 10px;
+                >li {
+                    width: 100%;
+                    height: 30px;
+                    >a {
+                        >span {
+                            line-height: 22px;
+                            font-family: "微软雅黑";
+                            font-size: 12px;
+                            margin-bottom: 5px;
+                            &:first-of-type {
+                                color: #000;
+                                float: left;
+                            }
+                            &:last-of-type {
+                                color: #ccc;
+                                float: right;
+                            }
                         }
                     }
                 }

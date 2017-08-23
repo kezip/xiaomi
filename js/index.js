@@ -1,33 +1,60 @@
 $(function () {
+    // 导航栏
     $.ajax({
         url: 'http://127.0.0.1:9900/api/nav',
-        // dataType: 'jsonp',
         success: function (data) {
             console.log(data);
             var list = JSON.parse(data);
             var lists = template('template', {
                 list: list
             });
-            $('.nav-center').append(lists);
+            $('.nav-center ul').append(lists);
         }
     })
-
-    // $('.nav-center ul:first-of-type li').append(listsBottom);
-    $('.nav-center ul:first-of-type li').on('hover', function () {
-        console.log(111);
+    // 导航下拉列表栏
+    var typeTest;
+    $('.nav-center>ul').on('mouseover', 'li', function () {
+        typeTest = $(this).attr('type');
+        // console.log('test');
+        $('.spinner').stop().slideDown();
         $.ajax({
             url: 'http://127.0.0.1:9900/api/nav',
-            data: 'type=' + $(this).attr(type),
+            data: {
+                type: typeTest
+            },
+            dataType: 'json',
             success: function (data) {
                 console.log(data);
-                var lists = JSON.parse(data);
-                var listsBottom = template('templates', {
-                    lists: lists
-                });
+                // var lists = JSON.parse(data);
+                var listsBottom = template('templates', data);
 
+                if (typeTest != "") {
+                    $('.spinner .typePage').html(listsBottom);
+                } else {
+                    // $('.spinner').stop().slideUp();
+                    $('.spinner').hide();
+                }
             }
         })
-        // $('.navCenterBottom').style.dispaly = blcok;
+    });
+    $('.nav-center>ul').on('mouseout', 'a', function () {
+        if (typeTest != "") {
+            $('.spinner').stop().slideUp();
+        }
     })
+    // 搜索框
+    $('.search').focus(function () {
+        $('.hot-product').hide();
+        $('.hot-search').show();
+        $('.search').css({ 'border': '1px solid #FF6700' });
+        $('.icon-sousuo').css({ 'border': '1px solid #FF6700' });
+    })
+    $('.search').blur(function () {
+        $('.hot-product').show();
+        $('.hot-search').hide();
+        $('.search').css({ 'border': '1px solid #ccc' });
+        $('.icon-sousuo').css({ 'border': '1px solid #ccc' });
+    })
+
 
 })
